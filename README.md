@@ -1,6 +1,5 @@
-
-<p align="center"><a href="https://www.sarthakj.me/WeddingEvite/"><img src="./assets/wedding.gif" width="150px" height="150px"/></a></p>
-<h1 align="center"><a href="https://saharshisha.netlify.app/assets/SI.pdf">Wedding Invitation</a> :ring: <br> <br> SAVE THE DATE: 14th Feb, 2021 <br> <a href="https://saharshisha.netlify.app/">Website</a></h1>
+<p align="center"><a href="#"><img src="./assets/wedding.gif" width="150px" height="150px"/></a></p>
+<h1 align="center">Wedding Invitation :ring: <br> <br> SAVE THE DATE: 9th March, 2026 <br> </h1>
 
 
 
@@ -8,34 +7,30 @@
 
 <details>
   <summary><strong>View Invitation</strong></summary>
-  <a href="https://saharshisha.netlify.app/"><img src="./assets/img/InviteMain.png" /></a>
+  <a href="#"><img src="./assets/img/InviteMain.png" /></a>
 </details>
 
-With the divine grace of the almighty, inviting you and your family to Saharsh's wedding to be held on **14th February at [Mishtten Resort](https://g.page/Mishttenresort),  Jhalawar, Rajasthan from 3:00 PM** onwards.
+With the divine grace of the almighty, inviting you and your family to Richa's wedding to be held on **9th March at Dev Resort, Saharsa, Bihar from 7:00 PM onwards**.
 
-- [Download](https://saharshisha.netlify.app/assets/SI.pdf) the Invitation card
-
-- Find [venue](https://g.page/Mishttenresort) on Google map
-
-- Visit the [website](https://saharshisha.netlify.app) for more details
+- Visit the website for more details (will be deployed soon)
 
 
 ```js
 
-const newCouple = 'Saharsh & Isha';
+const newCouple = 'Richa & Aashish';
 
-// Feb 14, 2021
-const weddingDate = new Date(2021, 02, 14);
+// March 9, 2026
+const weddingDate = new Date(2026, 03, 9);
 
-// Wedding venue: https://g.page/Mishttenresort
-const weddingVenue = new Location('Mishtten Resort, Rajasthan');
+// Wedding venue: Dev Resort, Saharsa, Bihar
+const weddingVenue = new Location('Dev Resort, Saharsa, Bihar');
 
 (function() {
     newCouple.willTieKnot(weddingDate);
 
     // your presence is requested
     (new Wedding()).acceptInvitation(
-        window.open('https://saharshisha.netlify.app/')
+        window.open('#')
     );
 })();
 
@@ -47,10 +42,4 @@ const weddingVenue = new Location('Mishtten Resort, Rajasthan');
 ### Do not forget to leave a star! :hugs:
 
 <br><sup><i>With warm regards,<br>
-**Sarthak Jain**<i></sup><br>
-
-## Credits for the Project 
-
-* Vinit Shahdeo - GitHub - https://github.com/vinitshahdeo  Project - https://github.com/vinitshahdeo/Wedding-Invitation
-
-* Sanket Singh - GitHub - https://github.com/singhsanket143 LinkedIn - https://www.linkedin.com/in/singhsanket143/ 
+**Akshay**<i></sup><br>
