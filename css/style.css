@@ -473,21 +473,30 @@ body {
 #time {
 	width: auto;
 	height: auto;
-	padding: 10px;
-	background-color: #eee;
-	border-radius: 25px;
-	font-size: 20px;
+	padding: 15px;
+	background: linear-gradient(135deg, #fff5f7 0%, #ffe8ec 100%);
+	border-radius: 20px;
+	font-size: 16px;
+	box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+	border: 2px solid rgba(255,107,129,0.2);
 }
 
 .venue {
 	width: auto;
 	height: auto;
-	background-color: #674ea7;
+	background: linear-gradient(135deg, #ff6b81 0%, #d63447 100%);
 	border-radius: 16px;
 	text-align: center;
 	color: #fff;
 	padding: 8px;
 	margin-right: 8px;
+	box-shadow: 0 5px 15px rgba(214,52,71,0.3);
+	transition: all 0.3s;
+}
+
+.venue:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 20px rgba(214,52,71,0.4);
 }
 
 .venue a {
@@ -500,16 +509,19 @@ body {
 	/* grid-template-columns: 1fr 1fr; */
 	border-radius: 10px;
 	overflow: hidden;
+	gap: 10px;
 }
 
 .block {
-	width: 180px;
-	height: 160px;
+	width: 120px;
+	height: 110px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
 	color: #fff;
+	font-size: 0.9em;
+	border-radius: 12px;
 
 	/* @media screen and (min-width: 560px) {
 		width: 135px;
@@ -519,19 +531,23 @@ body {
 }
 
 .days {
-	background: linear-gradient(90deg, #b33a46, #9b313c);
+	background: linear-gradient(135deg, #ff6b81 0%, #d63447 100%);
+	box-shadow: 0 4px 15px rgba(214,52,71,0.3);
 }
 
 .hours {
-	background: linear-gradient(90deg, #a7c3cd, #90a9b2);
+	background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+	box-shadow: 0 4px 15px rgba(255,154,158,0.3);
 }
 
 .minutes {
-	background-color: #874562;
+	background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+	box-shadow: 0 4px 15px rgba(255,216,155,0.3);
 }
 
 .seconds {
-	background-color: #145689;
+	background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+	box-shadow: 0 4px 15px rgba(168,237,234,0.3);
 }
 
 .date {
@@ -804,3 +820,291 @@ a {
 		}
 	  }
 
+/* Background Video Styling */
+#bg-video {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	object-fit: cover;
+	opacity: 0.4;
+}
+
+/* Ensure content is visible over video */
+.wrap, .actions, .footer, .happiness {
+	position: relative;
+	z-index: 1;
+}
+
+/* Venue Slider Styling */
+.venue-slider {
+	max-width: 800px;
+	margin: 2em auto;
+	position: relative;
+	overflow: hidden;
+	border-radius: 15px;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.venue-slider .slides {
+	display: flex;
+	width: 400%;
+	transition: transform 0.8s ease-in-out;
+	position: relative;
+}
+
+.venue-slider .slide {
+	width: 25%;
+	flex-shrink: 0;
+}
+
+.venue-slider .slide img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+/* Video in wrapper items */
+.wrapper .item video {
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+}
+
+/* Wedding Calendar Styles */
+.calendar-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+}
+
+.wedding-calendar {
+	background: linear-gradient(135deg, #fff5f7 0%, #ffe8ec 100%);
+	border-radius: 20px;
+	padding: 30px;
+	box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+	width: 100%;
+	max-width: 100%;
+	border: 3px solid rgba(255,107,129,0.2);
+	margin: 0 auto;
+}
+
+.calendar-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+	padding: 10px 0;
+}
+
+.calendar-title {
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #d63447;
+	margin: 0;
+	font-family: 'Dancing Script', cursive;
+}
+
+.calendar-nav {
+	background: rgba(255,107,129,0.2);
+	border: none;
+	color: #d63447;
+	font-size: 24px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.calendar-nav:hover {
+	background: rgba(255,107,129,0.4);
+	transform: scale(1.1);
+}
+
+.calendar-weekdays {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 8px;
+	margin-bottom: 10px;
+}
+
+.weekday {
+	text-align: center;
+	font-weight: 600;
+	color: #d63447;
+	font-size: 0.9em;
+	padding: 8px 0;
+}
+
+.calendar-days {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 8px;
+}
+
+.calendar-day {
+	aspect-ratio: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 12px;
+	font-size: 0.95em;
+	cursor: pointer;
+	transition: all 0.3s;
+	color: #333;
+	font-weight: 500;
+	background: white;
+}
+
+.calendar-day:hover {
+	background: rgba(255,107,129,0.3);
+	transform: scale(1.05);
+}
+
+.calendar-day.today {
+	background: linear-gradient(135deg, #ff6b81 0%, #d63447 100%);
+	color: white;
+	font-weight: bold;
+	box-shadow: 0 5px 15px rgba(214,52,71,0.4);
+	animation: pulse 2s infinite;
+}
+
+.calendar-day.wedding-day {
+	background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+	color: #333;
+	font-weight: bold;
+	box-shadow: 0 5px 20px rgba(255,215,0,0.5);
+	position: relative;
+}
+
+.calendar-day.wedding-day::after {
+	content: '💕';
+	position: absolute;
+	top: -8px;
+	right: -8px;
+	font-size: 18px;
+	animation: heartBeat 1.5s infinite;
+}
+
+.calendar-day.outside {
+	color: #ccc;
+	background: transparent;
+}
+
+@keyframes pulse {
+	0%, 100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+}
+
+@keyframes heartBeat {
+	0%, 100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.3);
+	}
+}
+
+/* Blue and Red Video below hearts */
+.blue-red-video-container {
+	max-width: 600px;
+	margin: 2em auto;
+	text-align: center;
+}
+
+.blue-red-video {
+	width: 100%;
+	max-width: 500px;
+	border-radius: 15px;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Modal Styling */
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.9);
+	animation: fadeIn 0.3s;
+}
+
+.modal-content {
+	position: relative;
+	margin: 5% auto;
+	width: 80%;
+	max-width: 800px;
+}
+
+.modal-video {
+	width: 100%;
+	border-radius: 10px;
+}
+
+.close {
+	color: #f1f1f1;
+	position: absolute;
+	top: -40px;
+	right: 0;
+	font-size: 40px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+	color: #bbb;
+}
+
+/* Coming Soon Message */
+.coming-soon-msg {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	padding: 30px 60px;
+	border-radius: 20px;
+	box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+	z-index: 2000;
+	animation: bounceIn 0.5s;
+}
+
+.coming-soon-msg h2 {
+	color: white;
+	font-size: 2.5em;
+	margin: 0;
+	text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+@keyframes bounceIn {
+	0% {
+		transform: translate(-50%, -50%) scale(0.3);
+		opacity: 0;
+	}
+	50% {
+		transform: translate(-50%, -50%) scale(1.05);
+	}
+	100% {
+		transform: translate(-50%, -50%) scale(1);
+		opacity: 1;
+	}
+}

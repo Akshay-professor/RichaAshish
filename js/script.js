@@ -30,7 +30,7 @@ function pauseAudio() {
 };
 
 // Set the date we're counting down to
-var countDownDate = new Date("Feb 14, 2021 00:00:00").getTime();
+var countDownDate = new Date("Mar 9, 2026 15:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -100,3 +100,20 @@ console.log(
     `%c शादी में जलूल जलूल आना होगा \n\n`,
     'color: yellow; background:tomato; font-size: 24pt; font-weight: bold',
 )
+// Auto-sliding Venue Gallery with slide-right animation
+document.addEventListener('DOMContentLoaded', function() {
+    const slidesContainer = document.querySelector('.venue-slider .slides');
+    const slides = document.querySelectorAll('.venue-slider .slide');
+    let currentSlide = 0;
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        const offset = -currentSlide * 25; // 25% for each slide (100% / 4 slides)
+        slidesContainer.style.transform = `translateX(${offset}%)`;
+    }
+
+    // Change slide every 4 seconds
+    if (slides.length > 0) {
+        setInterval(nextSlide, 4000);
+    }
+});
