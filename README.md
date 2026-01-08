@@ -7,7 +7,7 @@
 
 <details>
   <summary><strong>View Invitation</strong></summary>
-  <a href="#"><img src="./assets/img/InviteMain.png" /></a>
+  <!-- <a href="#"><img src="./assets/img/InviteMain.png" /></a> -->
 </details>
 
 With the divine grace of the almighty, inviting you and your family to Richa's wedding to be held on **9th March at Dev Resort, Saharsa, Bihar from 7:00 PM onwards**.
